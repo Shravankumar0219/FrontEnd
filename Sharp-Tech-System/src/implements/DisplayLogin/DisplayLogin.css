@@ -1,0 +1,59 @@
+/* DisplayLogin.css */
+
+.displaylogin-container {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin-top: 100px;
+}
+
+.displaylogin-card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  width: 100%;
+  max-width: 800px; /* Adjust max-width as needed */
+  padding: 20px;
+}
+
+.displaylogin-title {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #4492eb;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.displaylogin-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.displaylogin-row {
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.displaylogin-label {
+  font-weight: bold;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.displaylogin-value {
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .displaylogin-grid {
+    grid-template-columns: 1fr;
+  }
+  .displaylogin-container {
+   margin-top: 100px;
+  }
+}
