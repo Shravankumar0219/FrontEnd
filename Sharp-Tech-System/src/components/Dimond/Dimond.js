@@ -21,6 +21,7 @@ const Dimond = () => {
   return (
     <div>
       <div>this dimond</div>
+       <h1>this is gayathri testing commit</h1>
       <input
         type="text"
         value={value}
