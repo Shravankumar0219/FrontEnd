@@ -250,7 +250,7 @@ function Register() {
               </div>
             </div>
             <div className="form-row">
-              <div className="form-group col">2
+              <div className="form-group col">
                 <label htmlFor="role">Role</label>
                 <select className="form-control" name="role" value={user.role} onChange={onInputChange} required>
                   <option value="" disabled>Select the role</option>
