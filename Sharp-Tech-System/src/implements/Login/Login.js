@@ -8,6 +8,7 @@ import L_1 from '../../assets/login_image_6.jpg'
 import { MdEmail } from 'react-icons/md'; // Importing MdEmail icon
 import { FaLinkedin, FaInstagram, FaEnvelope, } from 'react-icons/fa';
 import { FaFacebook } from 'react-icons/fa';
+import { Link } from "react-router-dom";
 
 
 import "./Login.css";
@@ -69,7 +70,7 @@ const Login = () => {
 
           <br />
 
-          <p className='forgot-password'>Forgot Password?</p>
+          <Link to="/ForgetPassword" className='forgot-password'>Forgot Password?</Link>
        
         </form>
       </div>
