@@ -8,7 +8,8 @@ import EmployeeSearch from "./implements/EmployeeSearch/EmployeeSearch";
 
 import DisplayLogin from './implements/DisplayLogin/DisplayLogin';
 import Login from './implements/Login/Login';
-import Signup from "./implements/Signup/Signup";
+// import Signup from "./implements/Signup/Signup";
+
 import Register from "./implements/Register/Register"
 import About from './components/About/About';
 import "./App.css";
@@ -33,6 +34,8 @@ import DasAddressSearch from './Reports/DiscoverAbstractServicesReports/DasAddre
 import DasDisplay from './Reports/DiscoverAbstractServicesReports/DasDisplay/DasDisplay';
 import DasOrderSearch from './Reports/DiscoverAbstractServicesReports/DasOrderSearch/DasOrderSearch';
 import DasReport from './Reports/DiscoverAbstractServicesReports/DasReport/DasReport';
+import ForgetPassword from './implements/ForgetPassowrd/ForgetPassword';
+import ResetPassword from './implements/ResetPassword/ResetPassword';
 
 import Pagination from './implements/Pagination/Pagination';
 
@@ -53,20 +56,22 @@ function App() {
             <Route path="/Login" element={<Login />} />
             <Route path="/DisplayLogin" element={<DisplayLogin />} />
             <Route path="/EmployeeSearch" element={<EmployeeSearch />} />
-            <Route path="/Signup" element={<Signup />} />
+            {/* <Route path="/Signup" element={<Signup />} /> */}
             <Route path="/Tempservice" element={<Tempservice />} />
+            <Route path="/ForgetPassword" element={<ForgetPassword />} />
+            <Route path="/ResetPassword/:email" element={<ResetPassword />} />
             
         
             <Route path="/SoftwareServices" element={<SoftwareServices />} />
             <Route path="/AuthProvider" element={<AuthProvider/>} />
              {/* Check if user is authenticated and admin before rendering admin-only routes */}
-             {/* {UserService.adminOnly() && ( */}
-              {/* <> */}
+              {UserService.adminOnly() && ( 
+               <> 
                 <Route path="/Register" element={<Register />} />
                 <Route path="/DisplayALL" element={<DisplayAll/>} />
                 <Route path="/update-user/:userId" element={<UpdateUser />} />
-              {/* </> 
-            )} */}
+               </> 
+            )} 
             <Route path="/SketchRoof" element={<SketchRoof />} />
     
             <Route path="/TitleSearch" element={<TitleSearch/>} />
@@ -85,13 +90,6 @@ function App() {
             <Route path="/DasOrderSearch" element={<DasOrderSearch/>} />
             <Route path="/DasReport" element={<DasReport/>} />
             <Route path="/Pagination" element={<Pagination/>} />
-
-
-
-
-            
-
-
 
 
 
