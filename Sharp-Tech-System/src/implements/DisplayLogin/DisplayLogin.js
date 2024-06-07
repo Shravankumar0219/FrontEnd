@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import Footer from "../../components/Footer/Footer";
@@ -7,9 +7,12 @@ import EmpNavbar from '../EmpNavbar/EmpNavbar';
 import FormsNavbar from "../../components/FormsNavbar/FormsNavbar";
 import Navbar from '../../components/Navbar/Navbar';
 import UserService from '../UserService/UserService';
+import AuthContext from '../AuthContext/AuthContext';
+import { Link } from "react-router-dom";
 
 function DisplayLogin() {
   const [profileInfo, setProfileInfo] = useState(null);
+  const {  isAdmin } = useContext(AuthContext); // Use the context
 
   useEffect(() => {
     fetchProfileInfo();
@@ -36,6 +39,10 @@ function DisplayLogin() {
               <div className="displaylogin-row">
                 <div className="displaylogin-label">Employee Id:</div>
                 <div className="displaylogin-value">{profileInfo.empId}</div>
+              </div>
+              <div className="displaylogin-row">
+                <div className="displaylogin-label">Phone Number:</div>
+                <div className="displaylogin-value">{profileInfo.phoneNumber}</div>
               </div>
               <div className="displaylogin-row">
                 <div className="displaylogin-label">First Name:</div>
@@ -106,11 +113,14 @@ function DisplayLogin() {
                 <div className="displaylogin-label">Remark:</div>
                 <div className="displaylogin-value">{profileInfo.remark}</div>
               </div>
+              {isAdmin && <div className="displaylogin-card">
+              <button className='displaylogin-update-button'><Link to={`/update-user/${profileInfo.id}`}>Update</Link></button>
+            </div>}
             </div>
           </div>
         )}
       </div>
-      <Footer />
+      <Footer />  
     </div>
   );
 }

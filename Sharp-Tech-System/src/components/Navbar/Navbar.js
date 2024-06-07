@@ -38,7 +38,7 @@ const Navbar = () => {
 
   return (
     <nav className={`container ${sticky ? 'dark-nav' : ''}`}>
-      <Link to='carousel'> {/* Link the logo to the homepage */}
+      <Link to='Navbar'> {/* Link the logo to the homepage */}
         <img src={logo} alt="" className={`logo ${sticky ? 'sticky-logo' : ''}`} />
       </Link>
       <ul className={mobileMenu ? '' : 'hide-mobile-menu'}>
@@ -46,8 +46,8 @@ const Navbar = () => {
         {!isAuthenticated && <li ><Link to='carousel' smooth={true} offset={-250} duration={500}>Home</Link></li>}
         {!isAuthenticated && <li><Link to='about' smooth={true} offset={-150} duration={500}>About</Link></li>}
        
-        {!isAuthenticated && <li><Link to='program' smooth={true} offset={-460} duration={500}>Services</Link></li>}
-        {!isAuthenticated && <li><Link to='testimonials' smooth={true} offset={-360} duration={500}>Reports</Link></li>}
+        {!isAuthenticated && <li><Link to='program' smooth={true} offset={-440} duration={500}>Services</Link></li>}
+        {!isAuthenticated && <li><Link to='testimonials' smooth={true} offset={-320} duration={500}>Reports</Link></li>}
         {!isAuthenticated && <li><Link to='contact' smooth={true} offset={-250} duration={500}>Contact</Link></li>}
         {!isAuthenticated && <li className='btn'><RouterLink to="/Login">Login</RouterLink></li>}
         {/* {!isAuthenticated && <li><RouterLink to='/Tempservice'>Tempservice</RouterLink></li>} */}

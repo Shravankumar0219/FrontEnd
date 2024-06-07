@@ -12,8 +12,12 @@ const About = ({ setPlayState }) => {
     <div>
       <div className='about'>
         <Navbar />
-      
+        <div className="about-left">
+          <img src={about_img} alt="" className='about-img' />
+          <img src={play_icon} alt="" className='play-icon' onClick={() => { setPlayState(true) }} />
+        </div>
         <div className="about-right">
+
 
           <h2>Sharp Tech Systems</h2>
           <p>Sharp Tech Systems Pvt Ltd is a pioneering company
@@ -42,12 +46,9 @@ const About = ({ setPlayState }) => {
           {/* <Link to="/RoofSketch">  <p>4. Roof Sketch Services</p></Link> */}
 
 
-         
+
         </div>
-        <div className="about-left">
-          <img src={about_img} alt="" className='about-img' />
-          <img src={play_icon} alt="" className='play-icon' onClick={() => { setPlayState(true) }} />
-        </div>
+
       </div>
 
     </div>

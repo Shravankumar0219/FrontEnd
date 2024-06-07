@@ -43,6 +43,9 @@ const LoginNavbar = () => {
                 <li ><RouterLink to="/Dimond">Dimond</RouterLink></li> 
 
                 <li><RouterLink to='/Tempservice'>Tempservice</RouterLink></li>
+                <li><RouterLink to='/Pagination'>Tables</RouterLink></li>
+               
+               
                 {/* 
                 <li>
                     <Link to='/EmployeeSearch'>EmployeeSearch</Link>

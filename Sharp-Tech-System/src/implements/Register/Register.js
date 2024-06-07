@@ -171,7 +171,7 @@ function Register() {
               </div> */}
               <div className="form-group col">
                 <label htmlFor="phoneNumber">Phone Number</label>
-                <input type="tel" className="form-control" placeholder="Enter your phone number" name="phoneNumber" value={user.phoneNumber} onChange={onInputChange} maxLength="10" required />
+                <input type="tel" className="form-control" placeholder="Enter your phone number" name="phoneNumber" value={user.phoneNumber} onChange={onInputChange} pattern="\d{10}" required />
               </div>
             </div>
             <div className="form-row">
@@ -281,5 +281,6 @@ function Register() {
     </div>
   );
 }
+
 
 export default Register;

@@ -66,6 +66,7 @@ function Carousel({ images }) {
             {images.map((_, index) => {
               return (
                 <div
+                
                   key={index}
                   className={
                     index == current

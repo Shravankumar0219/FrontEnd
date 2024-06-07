@@ -11,11 +11,11 @@
 .carousel {
   display: flex;
   height: 700px;
-  width: 90%;
+  width: 100%;
   max-width: 100%;
   justify-content: center;
   align-items: center;
-  margin-left: 5%;
+  margin-left: none;
   margin-top: 110px;
 
 }
@@ -65,31 +65,11 @@
   /* Aligns content at the top */
 }
 
-/* .card_title {
-  color: rgb(53, 50, 50);
-  font-size: 30px;
-  background-color: rgba(92, 135, 184, 0.5);
-  padding-left: 15px;
-  padding-right: 15px;
-  border-radius: 50px;
-  opacity: 0;
-  transform: scale(0.9);
-  transition: transform 0.5s, opacity 0.5s;
-}
-
-.carousel_card-active .card_title {
-  opacity: 1;
-  transform: scale(1);
-} */
-
-
-
 
 .card_title {
   color: white;
   /* color: rgb(2, 2, 8); */
   /* color: rgb(2, 10, 17); */
-
   font-size: 30px;
   /* background-color: rgba(92, 135, 184, 0.5); */
   padding-left: 15px;
@@ -97,6 +77,10 @@
   border-radius: 50px;
   opacity: 0;
   animation: slideAndFadeIn 1.0s forwards;
+}
+.carousel_card-active .card_title {
+  opacity: 1;
+  animation: slideAndBounceIn 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
 }
 
 @keyframes slideAndFadeIn {
@@ -112,11 +96,6 @@
   }
 }
 
-
-.carousel_card-active .card_title {
-  opacity: 1;
-  animation: slideAndBounceIn 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
-}
 
 @keyframes slideAndBounceIn {
   from {
@@ -135,44 +114,6 @@
     transform: translateY(0) scale(1);
   }
 }
-
-
-/* .card_title {
-  color: rgb(53, 50, 50);
-  font-size: 30px;
-  background-color: rgba(92, 135, 184, 0.5);
-  padding-left: 15px;
-  padding-right: 15px;
-  border-radius: 50px;
-  opacity: 0;
-  transform: translateY(-50px) scale(0.5);
-  transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55), opacity 0.5s;
-}
-
-.carousel_card-active .card_title {
-  opacity: 1;
-  transform: translateY(0) scale(1);
-} */
-
-
-/* 
-.card_title {
-  color: rgb(53, 50, 50);
-  font-size: 30px;
-  background-color: rgba(92, 135, 184, 0.5);
-  padding-left: 15px;
-  padding-right: 15px;
-  border-radius: 50px;
-  opacity: 0;
-  transform: scale(1.0) rotate(-20deg);
-  transition: transform 1.0s cubic-bezier(0.68, -0.55, 0.265, 1.55), opacity 0.5s;
-}
-
-.carousel_card-active .card_title {
-  opacity: 1;
-  transform: scale(1) rotate(0deg);
-} */
-
 
 
 
@@ -250,7 +191,7 @@
 
 @media (max-height: 768px) {
   .carousel {
-    max-height: 80vh;
-    /* Adjust the height as needed */
+    height: 80vh;
+    
   }
 }

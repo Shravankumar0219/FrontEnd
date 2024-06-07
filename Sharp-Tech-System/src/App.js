@@ -34,6 +34,8 @@ import DasDisplay from './Reports/DiscoverAbstractServicesReports/DasDisplay/Das
 import DasOrderSearch from './Reports/DiscoverAbstractServicesReports/DasOrderSearch/DasOrderSearch';
 import DasReport from './Reports/DiscoverAbstractServicesReports/DasReport/DasReport';
 
+import Pagination from './implements/Pagination/Pagination';
+
 
 
 function App() {
@@ -82,6 +84,8 @@ function App() {
             <Route path="/DasDisplay/:orderNumber" element={<DasDisplay/>} />
             <Route path="/DasOrderSearch" element={<DasOrderSearch/>} />
             <Route path="/DasReport" element={<DasReport/>} />
+            <Route path="/Pagination" element={<Pagination/>} />
+
 
 
 

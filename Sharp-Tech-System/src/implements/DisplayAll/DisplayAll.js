@@ -61,6 +61,7 @@ function DisplayAll() {
             <thead>
               <tr>
                 <th>Employee ID</th>
+                <th>Phone Number</th>
                 <th>First Name</th>
                 <th>Middle Name</th>
                 <th>Last Name</th>
@@ -85,6 +86,7 @@ function DisplayAll() {
               {users.slice(0, visibleUsersCount).map((user) => ( // Slice the users array to only show visibleUsersCount items
                 <tr key={user.id}>
                   <td>{user.empId}</td>
+                  <td>{user.phoneNumber}</td>
                   <td>{user.firstName}</td>
                   <td>{user.middleName}</td>
                   <td>{user.lastName}</td>
