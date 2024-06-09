@@ -71,6 +71,7 @@ const Login = () => {
           <br />
 
           <Link to="/ForgetPassword" className='forgot-password'>Forgot Password?</Link>
+          <Link to="/ForgetPassword" className='forgot-password'>Forgot Password?</Link>
        
         </form>
       </div>
